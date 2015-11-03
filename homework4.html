@@ -6,25 +6,25 @@
     <script>
 
  function DoSep(){
- var yourNum = parseInt(prompt("Enter your number: "))
+ var yourNum = parseInt(prompt("Enter your number: "));
  if (yourNum%2==0 && yourNum%5==0 && yourNum%20==0 && yourNum%40==0) {
- document.write("Your number " + yourNum + " devided by 2, 5, 20 and 40")
+ document.write("Your number " + yourNum + " devided by 2, 5, 20 and 40");
  }
  else {
- alert("Try more!")
- DoSep()
+ alert("Try more!");
+ DoSep();
  }
  }
- DoSep()
+ DoSep();
 
- var yourCat1 = parseInt(prompt("Enter length of first side: "))
- var yourCat2 = parseInt(prompt("Enter length of second side: "))
+ var yourCat1 = parseInt(prompt("Enter length of first side: "));
+ var yourCat2 = parseInt(prompt("Enter length of second side: "));
  function DoCat(x,y){
- var catLength = Math.sqrt(Math.pow(x,2)+Math.pow(y,2))
- document.write("Your length is " + catLength)
+ var catLength = Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+ alert("Your length is " + catLength);
 
  }
- DoCat(yourCat1,yourCat2)
+ DoCat(yourCat1,yourCat2);
 
  var yourFck = parseInt(prompt("Enter your number: "));
         function DoFck(n){
