@@ -4,6 +4,7 @@
     <title>Метод equals</title>
 
     <script type="text/javascript">
+/*
         var person = {firstName: " ", lastName: " ", age: " ", occupation: " "};
         for (var propName in person) {
             var propItem = prompt ("Please, enter " + propName);
@@ -11,7 +12,17 @@
 
         }
         document.write("<p>" + person.firstName + " " + person.lastName + " " + person.age + " " + person.occupation);
-
+*/
+var myObj = {"1": "False", "2": "False", "3": "False", "4": "False", "5": "True"};
+function myFunc(x) {
+    for (var i in x){
+        document.write(x.i);
+        if (x.i == "True") {
+            document.write("Value: " + i + " = True")
+        }
+    }
+}
+myFunc(myObj);
     </script>
 </head>
 <body>
