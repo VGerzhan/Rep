@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Timer</title>
+    <script>
+        window.onload = function (){
+
+                var countersec = 0;
+                var countermin = 0;
+                var counterhours = 0;
+                var countInt;
+                var f = false;
+
+                function Count() {
+                    countersec++;
+                    if (countersec == 60){
+                        countermin++;
+                        countersec = 0;
+                    }
+                    if (countermin == 60){
+                        counterhours++;
+                        countermin = 0;
+                    }
+                    document.getElementById("output").innerHTML = (counterhours + ":" + countermin + ":" + countersec);
+                }
+            document.querySelector('#start').onclick = function(){
+                if (f == false) {
+                    f = true;
+                    countInt = setInterval(Count, 1000);
+                }
+
+            }
+            document.querySelector('#stop').onclick = function(){
+                clearInterval(countInt);
+                f = false;
+            }
+            document.querySelector('#reset').onclick = function(){
+               countersec = 0;
+               countermin = 0;
+               counterhours = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="start">Start</button> <button id="stop">Stop</button> <button id="reset">Reset</button>
+<p id="output">0</p>
+</body>
+</html>
