@@ -11,11 +11,12 @@
                 'yellowrope.jpg',
                 'sheridyn.jpg',
                 'sunset.jpg',
-            ], i = 0;
+            ], i = 1;
+			div.setAttribute("style", "background: url("+imgHead[0]+") no-repeat;background-size:100%");
             function Slide() {
                     div.setAttribute("style", "background: url("+imgHead[i]+") no-repeat;background-size:100%");
                     i = i + 1;
-                    if (i == imgHead.length-1){
+                    if (i == imgHead.length){
                         i = 0;
                     }
             }
