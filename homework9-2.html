@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Перетаскивание элементов документа</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        window.onload = function (){
+            var item = document.getElementById('item');
+            item.onmouseover = item.onmouseout = handler;
+            function handler(event) {
+                var itembuy = document.getElementById('itembuy');
+                var itembuybutton = document.getElementById('itembuybutton');
+                if (event.type == 'mouseover') {
+//                    alert(event.target);
+                    itembuy.setAttribute("style", "display:inline;");
+                    itembuybutton.setAttribute("style", "display:inline;");
+                }
+                if (event.type == 'mouseout') {
+                    document.getElementsByClassName('itembuy').setAttribute("style", "display:none;");
+                    document.getElementsByClassName('itembuybutton').setAttribute("style", "display:none;");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="item">
+<div class="itembuy"><button class="itembuybutton"></button></div>
+
+</div>
+</body>
+</html>
