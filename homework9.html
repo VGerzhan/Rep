@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Untitled Document</title>
+    <script>
+        window.onload = function (){
+            var p = document.getElementsByTagName(p);
+            addEventListener("keydown", function(event) {
+                if (event.which == 82) { //red
+                    p.setAttribute("style", "background-color: red;");
+                }
+                else if (event.which == 71) { //green
+                    p.setAttribute("style", "background-color: green;");
+                }
+                else if (event.which == 66) { //blue
+                    p.setAttribute("style", "background-color: blue;");
+                }
+
+            });
+        }
+    </script>
+</head>
+
+<body id="body">
+<div id="div">
+    <p>Text 1</p>
+    <p>Text 2</p>
+    <p>Text 3</p>
+</div>
+</body>
+</html>
