@@ -6,16 +6,20 @@
     <title>Untitled Document</title>
     <script>
         window.onload = function (){
-            var p = document.getElementsByTagName(p);
+            var p = document.getElementsByTagName('p');
+            var color = "black";
             addEventListener("keydown", function(event) {
-                if (event.which == 82) { //red
-                    p.setAttribute("style", "background-color: red;");
-                }
-                else if (event.which == 71) { //green
-                    p.setAttribute("style", "background-color: green;");
-                }
-                else if (event.which == 66) { //blue
-                    p.setAttribute("style", "background-color: blue;");
+                    if (event.which == 82) { //red
+                        var color = "red";
+                    }
+                    else if (event.which == 71) { //green
+                        var color = "green";
+                    }
+                    else if (event.which == 66) { //blue
+                        var color = "blue";
+                    }
+                for (var i=0; i<p.length; i++) {
+                    p[i].setAttribute("style", "color: "+color+";");
                 }
 
             });
