@@ -1,69 +1,20 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Метод equals</title>
+<p>Имя: <input type="text" data-help="Ваше полное имя"></p>
+<p>Возраст: <input type="text" data-help="Возраст в годах"></p>
+<p id="help"></p>
 
-    <script type="text/javascript">
-/*
-        var person = {firstName: " ", lastName: " ", age: " ", occupation: " "};
-        for (var propName in person) {
-            var propItem = prompt ("Please, enter " + propName);
-            person.propName = propItem;
-
-        }
-        document.write("<p>" + person.firstName + " " + person.lastName + " " + person.age + " " + person.occupation);
-*/
-var myObj = {"1": "False", "2": "False", "3": "False", "4": "False", "5": "True"};
-function myFunc(x) {
-    for (var i in x){
-        document.write(x.i);
-        if (x.i == "True") {
-            document.write("Value: " + i + " = True")
-        }
-    }
-}
-myFunc(myObj);
-    </script>
-</head>
-<body>
-</body>
-</html>
-\
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Untitled Document</title>
 <script>
-        window.onload = function (){
-  var div = document.getElementById("div");	
-addEventListener("keydown", function(event) {
-  var top = 0;
-  var left = 0;
-  if (event.which == 40) { //up
-  top = top + 10;
-  div.style.top = (top + "px");
+  var help = document.querySelector("#help");
+  var fields = document.querySelectorAll("input");
+  for (var i = 0; i < fields.length; i++) {
+    fields[i].addEventListener("focus", function(event) {
+      var text = event.target.getAttribute("data-help");
+      help.textContent = text;
+    });
+    fields[i].addEventListener("blur", function(event) {
+      help.textContent = "";
+    });
   }
-  else if (event.which == 38) { //down
-  top = top - 10;
-  div.style.top = (top + "px");  
-  }
-  else if (event.which == 39) { //left
-  left = left + 10;
-  div.style.left = (left + "px");  
-  }
-  else if (event.which == 37) { //right
-  left = left - 10;
-  div.style.left = (left + "px"); 
-  }
- 
-});
-}
 </script>
-</head>
 
-<body id="body">
-<div id="div" style="left:500 px;margin-left:20 px;margin-right:20 px;margin-bottom:20 px;">ALOHA!</div>
-</body>
-</html>
+
+
